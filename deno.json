@@ -1,9 +1,14 @@
 {
   "imports": {
-    "hono": "jsr:@hono/hono@^4.6.3"
+    "@langchain/community": "npm:@langchain/community@^0.3.2",
+    "@langchain/core": "npm:@langchain/core@^0.3.3",
+    "dedent": "npm:dedent@^1.5.3",
+    "hono": "jsr:@hono/hono@^4.6.3",
+    "jsonwebtoken": "npm:jsonwebtoken@^9.0.2"
   },
   "tasks": {
-    "start": "deno run --allow-net main.ts"
+    "start": "deno run --env --allow-env --allow-net main.ts",
+    "dev": "deno run --watch --allow-net --allow-env --env main.ts"
   },
   "compilerOptions": {
     "jsx": "precompile",
